@@ -1,5 +1,5 @@
 # lnsByoi
-Bring Your Own Image (BYOI) into Oracle Cloud Infrastructure
+Bring Your Own Instance (BYOI) into Oracle Cloud Infrastructure
 
 
 > You are running Linux or Windows workload 
