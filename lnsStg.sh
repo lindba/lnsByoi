@@ -8,7 +8,7 @@ bktUrl="$bkt"; bkt="--bucket-name $bkt";
 cfg="--config-file $PWD/lns.cfg";
 cmpId="--compartment-id $cmpId";
 dn=$(echo $img| cut -d'.' -f1); dnCls="--display-name $dn";
-lm="--launch-mode $lm";
+lm="--launch-mode EMULATED";
 nsUrl="$namespace"; ns="--namespace=$namespace"; 
 sbn="  --subnet-id $sbn";
 shp="--shape $shp";
