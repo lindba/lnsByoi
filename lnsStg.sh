@@ -1,5 +1,3 @@
-#oci --config-file ./ociCli.cfg os bucket list --namespace-name=modusbox --compartment-id=ocid1.compartment.oc1..aaaaaaaabvrkw7zf2tb33xdefvwylxwonbuapkrk2nkn7a6lh7eom2sd727q
-#export https_proxy=www-proxy.idc.oracle.com:80
 cd /tmp/scripts/lnsByoi;
 . $PWD/lns.cfg 2>/dev/null; chmod 600 $PWD/lns.cfg
 rg=$region; 
@@ -23,7 +21,6 @@ cmd="$cfg os object put $ns $bkt --name $img  --no-overwrite --file -"; cat /u01
 
 # import image 
 echo "Step 5: Importing uploaded image as OCI custom image....";
-#url=https://objectstorage.eu-frankfurt-1.oraclecloud.com/n/gsebmcs00009/b/mybucket/o/ol74Repo.qcow2
 url=https://objectstorage.$rg.oraclecloud.com/n/$nsUrl/b/$bktUrl/o/$img
 cmd="$cfg compute image import from-object-uri --uri $url $cmpId $dnCls $lm"; oci $cmd;
 #oci $cfg compute image import from-object-uri --uri $url $cmpId $dnCls $lm
